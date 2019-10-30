@@ -1,0 +1,176 @@
+[{
+    "Name": "label",
+    "HexString": "#ffffffff",
+    "RGBA": "rgba(255.0, 255.0, 255.0, 1.0)"
+  },
+  {
+    "Name": "secondaryLabel",
+    "HexString": "#ebebf599",
+    "RGBA": "rgba(235.0, 235.0, 245.0, 0.6)"
+  },
+  {
+    "Name": "tertiaryLabel",
+    "HexString": "#ebebf54c",
+    "RGBA": "rgba(235.0, 235.0, 245.0, 0.3)"
+  },
+  {
+    "Name": "quaternaryLabel",
+    "HexString": "#ebebf52d",
+    "RGBA": "rgba(235.0, 235.0, 245.0, 0.18)"
+  },
+  {
+    "Name": "systemFill",
+    "HexString": "#7878805b",
+    "RGBA": "rgba(120.0, 120.0, 128.0, 0.36)"
+  },
+  {
+    "Name": "secondarySystemFill",
+    "HexString": "#78788051",
+    "RGBA": "rgba(120.0, 120.0, 128.0, 0.32)"
+  },
+  {
+    "Name": "tertiarySystemFill",
+    "HexString": "#7676803d",
+    "RGBA": "rgba(118.0, 118.0, 128.0, 0.24)"
+  },
+  {
+    "Name": "quaternarySystemFill",
+    "HexString": "#7676802d",
+    "RGBA": "rgba(118.0, 118.0, 128.0, 0.18)"
+  },
+  {
+    "Name": "placeholderText",
+    "HexString": "#ebebf54c",
+    "RGBA": "rgba(235.0, 235.0, 245.0, 0.3)"
+  },
+  {
+    "Name": "systemBackground",
+    "HexString": "#000000ff",
+    "RGBA": "rgba(0.0, 0.0, 0.0, 1.0)"
+  },
+  {
+    "Name": "secondarySystemBackground",
+    "HexString": "#1c1c1eff",
+    "RGBA": "rgba(28.0, 28.0, 30.0, 1.0)"
+  },
+  {
+    "Name": "tertiarySystemBackground",
+    "HexString": "#2c2c2eff",
+    "RGBA": "rgba(44.0, 44.0, 46.0, 1.0)"
+  },
+  {
+    "Name": "systemGroupedBackground",
+    "HexString": "#000000ff",
+    "RGBA": "rgba(0.0, 0.0, 0.0, 1.0)"
+  },
+  {
+    "Name": "secondarySystemGroupedBackground",
+    "HexString": "#1c1c1eff",
+    "RGBA": "rgba(28.0, 28.0, 30.0, 1.0)"
+  },
+  {
+    "Name": "tertiarySystemGroupedBackground",
+    "HexString": "#2c2c2eff",
+    "RGBA": "rgba(44.0, 44.0, 46.0, 1.0)"
+  },
+  {
+    "Name": "separator",
+    "HexString": "#54545899",
+    "RGBA": "rgba(84.0, 84.0, 88.0, 0.6)"
+  },
+  {
+    "Name": "opaqueSeparator",
+    "HexString": "#38383aff",
+    "RGBA": "rgba(56.0, 56.0, 58.0, 1.0)"
+  },
+  {
+    "Name": "link",
+    "HexString": "#0984ffff",
+    "RGBA": "rgba(9.0, 132.0, 255.0, 1.0)"
+  },
+  {
+    "Name": "darkText",
+    "HexString": "#000000ff",
+    "RGBA": "rgba(0.0, 0.0, 0.0, 1.0)"
+  },
+  {
+    "Name": "lightText",
+    "HexString": "#ffffff99",
+    "RGBA": "rgba(255.0, 255.0, 255.0, 0.6)"
+  },
+  {
+    "Name": "systemBlue",
+    "HexString": "#0a84ffff",
+    "RGBA": "rgba(10.0, 132.0, 255.0, 1.0)"
+  },
+  {
+    "Name": "systemGreen",
+    "HexString": "#30d158ff",
+    "RGBA": "rgba(48.0, 209.0, 88.0, 1.0)"
+  },
+  {
+    "Name": "systemIndigo",
+    "HexString": "#5e5ce6ff",
+    "RGBA": "rgba(94.0, 92.0, 230.0, 1.0)"
+  },
+  {
+    "Name": "systemOrange",
+    "HexString": "#ff9f0aff",
+    "RGBA": "rgba(255.0, 159.0, 10.0, 1.0)"
+  },
+  {
+    "Name": "systemPink",
+    "HexString": "#ff375fff",
+    "RGBA": "rgba(255.0, 55.0, 95.0, 1.0)"
+  },
+  {
+    "Name": "systemPurple",
+    "HexString": "#bf5af2ff",
+    "RGBA": "rgba(191.0, 90.0, 242.0, 1.0)"
+  },
+  {
+    "Name": "systemRed",
+    "HexString": "#ff453aff",
+    "RGBA": "rgba(255.0, 69.0, 58.0, 1.0)"
+  },
+  {
+    "Name": "systemTeal",
+    "HexString": "#64d2ffff",
+    "RGBA": "rgba(100.0, 210.0, 255.0, 1.0)"
+  },
+  {
+    "Name": "systemYellow",
+    "HexString": "#ffd60aff",
+    "RGBA": "rgba(255.0, 214.0, 10.0, 1.0)"
+  },
+  {
+    "Name": "systemGray",
+    "HexString": "#8e8e93ff",
+    "RGBA": "rgba(142.0, 142.0, 147.0, 1.0)"
+  },
+  {
+    "Name": "systemGray2",
+    "HexString": "#636366ff",
+    "RGBA": "rgba(99.0, 99.0, 102.0, 1.0)"
+  },
+  {
+    "Name": "systemGray3",
+    "HexString": "#48484aff",
+    "RGBA": "rgba(72.0, 72.0, 74.0, 1.0)"
+  },
+  {
+    "Name": "systemGray4",
+    "HexString": "#3a3a3cff",
+    "RGBA": "rgba(58.0, 58.0, 60.0, 1.0)"
+  },
+  {
+    "Name": "systemGray5",
+    "HexString": "#2c2c2eff",
+    "RGBA": "rgba(44.0, 44.0, 46.0, 1.0)"
+  },
+  {
+    "Name": "systemGray6",
+    "HexString": "#1c1c1eff",
+    "RGBA": "rgba(28.0, 28.0, 30.0, 1.0)"
+  }
+]

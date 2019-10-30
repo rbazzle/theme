@@ -1,0 +1,25 @@
+<script>
+    window.onmessage = async (event) => {
+        if (event.data.pluginMessage.type === 'networkRequest') {
+            var request = new XMLHttpRequest()
+            // This link has random lorem ipsum text
+            request.open('GET',
+                //LIGHT
+                // 'https://api.jsonbin.io/b/5d9992008754827e13fe1f41/3'
+                //DARK
+                'https://api.jsonbin.io/b/5d9a5f8bfdb9972702ddc18c'
+            );
+            request.setRequestHeader(
+                'secret-key',
+                '$2b$10$SdWsaaDD2pyQ32caqw6H7ulN3SpDKYfS5znwpKY4SROBcyU1uhrtq'
+            );
+            request.responseType = 'json'
+            request.onload = () => {
+                window.parent.postMessage({
+                    pluginMessage: request.response
+                }, '*')
+            };
+            request.send()
+        }
+    }
+</script>
