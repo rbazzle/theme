@@ -1,65 +1,86 @@
 figma.showUI(__html__, { visible: false });
 figma.ui.postMessage({ type: 'networkRequest' });
+figma.loadFontAsync({ family: 'Roboto', style: 'Regular' });
 
 figma.ui.onmessage = async msg => {
-	//CONVERT #RRGGBBAA to RGBA PCT
-	function hexAToRGBA255(h) {
-		let r1 = '0x' + h[1] + h[2];
-		let g1 = '0x' + h[3] + h[4];
-		let b1 = '0x' + h[5] + h[6];
-		let a1 = '0x' + h[7] + h[8];
+	console.log(msg);
 
-		let r = +(Number(r1) / 255).toFixed(3);
-		let g = +(Number(g1) / 255).toFixed(3);
-		let b = +(Number(b1) / 255).toFixed(3);
-		let a = +(Number(a1) / 255).toFixed(2);
+	msg.forEach(element => {
+		const lightTheme = element => {
+			let { name } = element;
+			let { r: r1, g: g1, b: b1, a } = element.light.rgba;
+			//CONVERT #RRGGBBAA to RGBA PCT
+			let r = +Number(r1 / 255).toFixed(3);
+			let g = +Number(g1 / 255).toFixed(3);
+			let b = +Number(b1 / 255).toFixed(3);
+			const style = figma.createPaintStyle();
+			style.name = 'LIGHT' + name;
+			style.paints = [
+				{
+					type: 'SOLID',
+					color: { r, g, b },
+					opacity: a
+				}
+			];
+		};
 
-		let colorObj = { r: r, g: g, b: b, a: a };
+		const darkTheme = element => {
+			let { name } = element;
+			let { r: r1, g: g1, b: b1, a } = element.dark.rgba;
+			//CONVERT #RRGGBBAA to RGBA PCT
+			let r = +Number(r1 / 255).toFixed(3);
+			let g = +Number(g1 / 255).toFixed(3);
+			let b = +Number(b1 / 255).toFixed(3);
+			const style = figma.createPaintStyle();
+			style.name = 'DARK' + name;
+			style.paints = [
+				{
+					type: 'SOLID',
+					color: { r, g, b },
+					opacity: a
+				}
+			];
+		};
+		lightTheme(element);
+		darkTheme(element);
+	});
 
-		return colorObj;
-	}
+	let styleList = figma.getLocalPaintStyles();
+	console.log(styleList);
 
 	const nodes: SceneNode[] = [];
 
-	function createTheme(item, rgba) {
-		//CREATE RECTANGLES/CIRCLES
+	//CREATE RECTANGLES/CIRCLES WITH LABELS
 
+	for (let i = 0; i < styleList.length; i++) {
+		const { name, id } = styleList[i];
 		const rect = figma.createRectangle();
-		rect.name = item.Name;
+		rect.name = name;
+		rect.y = i * 150;
 		rect.cornerRadius = 100;
-		rect.fills = [
-			{
-				type: 'SOLID',
-				color: { r: rgba.r, g: rgba.g, b: rgba.b },
-				opacity: rgba.a
-			}
-		];
+		rect.fillStyleId = id;
 		figma.currentPage.appendChild(rect);
-		nodes.push(rect);
 
-		//CREATE STYLES
+		const label = figma.createText();
+		label.fills = [{ type: 'SOLID', color: { r: 0, g: 0, b: 0 } }];
+		label.characters = name;
+		label.fontSize = 30;
+		label.x = 200;
+		label.y = i * 150;
+		label.textAlignVertical = 'TOP';
+		label.lineHeight = {
+			value: 100,
+			unit: 'PIXELS'
+		};
+		label.name = name;
+		figma.currentPage.appendChild(label);
 
-		const style = figma.createPaintStyle();
-		style.name = item.Name;
-		style.paints = [
-			{
-				type: 'SOLID',
-				color: { r: rgba.r, g: rgba.g, b: rgba.b },
-				opacity: rgba.a
-			}
-		];
+		nodes.push(rect, label);
 	}
-
-	//ITERATE THROUGH ARRAY CONVERT AND ADD STYLES
-	msg.forEach(item => {
-		let rgba = hexAToRGBA255(item.HexString);
-		createTheme(item, rgba);
-	});
 
 	figma.currentPage.selection = nodes;
 	figma.viewport.scrollAndZoomIntoView(nodes);
 
 	//CLOSE PLUGIN
-
 	figma.closePlugin();
 };
