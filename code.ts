@@ -4,6 +4,7 @@ figma.loadFontAsync({ family: 'Roboto', style: 'Regular' });
 
 figma.ui.onmessage = async msg => {
 	console.log(msg);
+	console.log("Hello")
 
 	msg.forEach(element => {
 		const lightTheme = element => {

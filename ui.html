@@ -5,14 +5,14 @@
 
 			request.open('GET', 'https://api.jsonbin.io/b/5d9a5f8bfdb9972702ddc18c');
 
+
 			request.setRequestHeader(
 				'secret-key',
 				'$2b$10$SdWsaaDD2pyQ32caqw6H7ulN3SpDKYfS5znwpKY4SROBcyU1uhrtq'
 			);
 			request.responseType = 'json';
 			request.onload = () => {
-				window.parent.postMessage(
-					{
+				window.parent.postMessage({
 						pluginMessage: request.response
 					},
 					'*'
