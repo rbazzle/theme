@@ -12,46 +12,35 @@ figma.ui.postMessage({ type: 'networkRequest' });
 figma.loadFontAsync({ family: 'Roboto', style: 'Regular' });
 figma.ui.onmessage = (msg) => __awaiter(this, void 0, void 0, function* () {
     console.log(msg);
-    msg.forEach(element => {
-        const lightTheme = element => {
-            let { name } = element;
-            let { r: r1, g: g1, b: b1, a } = element.light.rgba;
-            //CONVERT #RRGGBBAA to RGBA PCT
-            let r = +Number(r1 / 255).toFixed(3);
-            let g = +Number(g1 / 255).toFixed(3);
-            let b = +Number(b1 / 255).toFixed(3);
-            const style = figma.createPaintStyle();
-            style.name = 'LIGHT' + name;
-            style.paints = [
-                {
-                    type: 'SOLID',
-                    color: { r, g, b },
-                    opacity: a
-                }
-            ];
+    let formatArr = [];
+    let { lightTheme } = msg[0];
+    lightTheme.forEach(element => {
+        let { name } = element;
+        console.log(name);
+        let { r: r1, g: g1, b: b1, a } = element.colors.rgba;
+        //CONVERT #RRGGBBAA to RGBA PCT
+        let r = +Number(r1 / 255).toFixed(2);
+        let g = +Number(g1 / 255).toFixed(2);
+        let b = +Number(b1 / 255).toFixed(2);
+        const style = figma.createPaintStyle();
+        style.name = name;
+        style.paints = [
+            {
+                type: 'SOLID',
+                color: { r, g, b },
+                opacity: a
+            }
+        ];
+        let obj = {
+            name: name,
+            theme: 'Light',
+            rgba: { r, g, b },
+            opacity: a
         };
-        const darkTheme = element => {
-            let { name } = element;
-            let { r: r1, g: g1, b: b1, a } = element.dark.rgba;
-            //CONVERT #RRGGBBAA to RGBA PCT
-            let r = +Number(r1 / 255).toFixed(3);
-            let g = +Number(g1 / 255).toFixed(3);
-            let b = +Number(b1 / 255).toFixed(3);
-            const style = figma.createPaintStyle();
-            style.name = 'DARK' + name;
-            style.paints = [
-                {
-                    type: 'SOLID',
-                    color: { r, g, b },
-                    opacity: a
-                }
-            ];
-        };
-        lightTheme(element);
-        darkTheme(element);
+        formatArr.push(obj);
     });
+    console.log(formatArr);
     let styleList = figma.getLocalPaintStyles();
-    console.log(styleList);
     const nodes = [];
     //CREATE RECTANGLES/CIRCLES WITH LABELS
     for (let i = 0; i < styleList.length; i++) {

@@ -1,0 +1,701 @@
+[{
+        "name": "fsLabel",
+        "theme": "Light",
+        "rgba": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsSecondaryLabel",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.24,
+            "g": 0.24,
+            "b": 0.26
+        },
+        "opacity": 0.6
+    },
+    {
+        "name": "fsTertiaryLabel",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.24,
+            "g": 0.24,
+            "b": 0.26
+        },
+        "opacity": 0.3
+    },
+    {
+        "name": "fsQuaternaryLabel",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.24,
+            "g": 0.24,
+            "b": 0.26
+        },
+        "opacity": 0.18
+    },
+    {
+        "name": "fsFill",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.47,
+            "g": 0.47,
+            "b": 0.5
+        },
+        "opacity": 0.2
+    },
+    {
+        "name": "fsSecondaryFill",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.47,
+            "g": 0.47,
+            "b": 0.5
+        },
+        "opacity": 0.16
+    },
+    {
+        "name": "fsTertiaryFill",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.46,
+            "g": 0.46,
+            "b": 0.5
+        },
+        "opacity": 0.12
+    },
+    {
+        "name": "fsQuaternaryFill",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.45,
+            "g": 0.45,
+            "b": 0.5
+        },
+        "opacity": 0.08
+    },
+    {
+        "name": "fsPlaceholderText",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.24,
+            "g": 0.24,
+            "b": 0.26
+        },
+        "opacity": 0.3
+    },
+    {
+        "name": "fsBackground",
+        "theme": "Light",
+        "rgba": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsSecondaryBackground",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.95,
+            "g": 0.95,
+            "b": 0.97
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsTertiaryBackground",
+        "theme": "Light",
+        "rgba": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGroupedBackground",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.95,
+            "g": 0.95,
+            "b": 0.97
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsSecondaryGroupedBackground",
+        "theme": "Light",
+        "rgba": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsTertiaryGroupedBackground",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.95,
+            "g": 0.95,
+            "b": 0.97
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsSeparator",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.24,
+            "g": 0.24,
+            "b": 0.26
+        },
+        "opacity": 0.29
+    },
+    {
+        "name": "fsOpaqueSeparator",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.78,
+            "g": 0.78,
+            "b": 0.78
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsLink",
+        "theme": "Light",
+        "rgba": {
+            "r": 0,
+            "g": 0.48,
+            "b": 1
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsTextDark",
+        "theme": "Light",
+        "rgba": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsTextLight",
+        "theme": "Light",
+        "rgba": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+        },
+        "opacity": 0.6
+    },
+    {
+        "name": "fsBlue",
+        "theme": "Light",
+        "rgba": {
+            "r": 0,
+            "g": 0.48,
+            "b": 1
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGreen",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.2,
+            "g": 0.78,
+            "b": 0.35
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsIndigo",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.35,
+            "g": 0.34,
+            "b": 0.84
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsOrange",
+        "theme": "Light",
+        "rgba": {
+            "r": 1,
+            "g": 0.58,
+            "b": 0
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsPink",
+        "theme": "Light",
+        "rgba": {
+            "r": 1,
+            "g": 0.18,
+            "b": 0.33
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsPurple",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.69,
+            "g": 0.32,
+            "b": 0.87
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsRed",
+        "theme": "Light",
+        "rgba": {
+            "r": 1,
+            "g": 0.23,
+            "b": 0.19
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsTeal",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.35,
+            "g": 0.78,
+            "b": 0.98
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsYellow",
+        "theme": "Light",
+        "rgba": {
+            "r": 1,
+            "g": 0.8,
+            "b": 0
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGray",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.56,
+            "g": 0.56,
+            "b": 0.58
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGray2",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.68,
+            "g": 0.68,
+            "b": 0.7
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGray3",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.78,
+            "g": 0.78,
+            "b": 0.8
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGray4",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.82,
+            "g": 0.82,
+            "b": 0.84
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGray5",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.9,
+            "g": 0.9,
+            "b": 0.92
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGray6",
+        "theme": "Light",
+        "rgba": {
+            "r": 0.95,
+            "g": 0.95,
+            "b": 0.97
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsLabel",
+        "theme": "Dark",
+        "rgba": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsSecondaryLabel",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.92,
+            "g": 0.92,
+            "b": 0.96
+        },
+        "opacity": 0.6
+    },
+    {
+        "name": "fsTertiaryLabel",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.92,
+            "g": 0.92,
+            "b": 0.96
+        },
+        "opacity": 0.3
+    },
+    {
+        "name": "fsQuaternaryLabel",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.92,
+            "g": 0.92,
+            "b": 0.96
+        },
+        "opacity": 0.18
+    },
+    {
+        "name": "fsFill",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.47,
+            "g": 0.47,
+            "b": 0.5
+        },
+        "opacity": 0.36
+    },
+    {
+        "name": "fsSecondaryFill",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.47,
+            "g": 0.47,
+            "b": 0.5
+        },
+        "opacity": 0.32
+    },
+    {
+        "name": "fsTertiaryFill",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.46,
+            "g": 0.46,
+            "b": 0.5
+        },
+        "opacity": 0.24
+    },
+    {
+        "name": "fsQuaternaryFill",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.46,
+            "g": 0.46,
+            "b": 0.5
+        },
+        "opacity": 0.18
+    },
+    {
+        "name": "fsPlaceholderText",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.92,
+            "g": 0.92,
+            "b": 0.96
+        },
+        "opacity": 0.3
+    },
+    {
+        "name": "fsBackground",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsSecondaryBackground",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.11,
+            "g": 0.11,
+            "b": 0.12
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsTertiaryBackground",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.17,
+            "g": 0.17,
+            "b": 0.18
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGroupedBackground",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsSecondaryGroupedBackground",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.11,
+            "g": 0.11,
+            "b": 0.12
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsTertiaryGroupedBackground",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.17,
+            "g": 0.17,
+            "b": 0.18
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsSeparator",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.33,
+            "g": 0.33,
+            "b": 0.35
+        },
+        "opacity": 0.6
+    },
+    {
+        "name": "fsOpaqueSeparator",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.22,
+            "g": 0.22,
+            "b": 0.23
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsLink",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.04,
+            "g": 0.52,
+            "b": 1
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsTextDark",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsTextLight",
+        "theme": "Dark",
+        "rgba": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+        },
+        "opacity": 0.6
+    },
+    {
+        "name": "fsBlue",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.04,
+            "g": 0.52,
+            "b": 1
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGreen",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.19,
+            "g": 0.82,
+            "b": 0.35
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsIndigo",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.37,
+            "g": 0.36,
+            "b": 0.9
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsOrange",
+        "theme": "Dark",
+        "rgba": {
+            "r": 1,
+            "g": 0.62,
+            "b": 0.04
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsPink",
+        "theme": "Dark",
+        "rgba": {
+            "r": 1,
+            "g": 0.22,
+            "b": 0.37
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsPurple",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.75,
+            "g": 0.35,
+            "b": 0.95
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsRed",
+        "theme": "Dark",
+        "rgba": {
+            "r": 1,
+            "g": 0.27,
+            "b": 0.23
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsTeal",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.39,
+            "g": 0.82,
+            "b": 1
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsYellow",
+        "theme": "Dark",
+        "rgba": {
+            "r": 1,
+            "g": 0.84,
+            "b": 0.04
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGray",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.56,
+            "g": 0.56,
+            "b": 0.58
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGray2",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.39,
+            "g": 0.39,
+            "b": 0.4
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGray3",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.28,
+            "g": 0.28,
+            "b": 0.29
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGray4",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.23,
+            "g": 0.23,
+            "b": 0.24
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGray5",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.17,
+            "g": 0.17,
+            "b": 0.18
+        },
+        "opacity": 1
+    },
+    {
+        "name": "fsGray6",
+        "theme": "Dark",
+        "rgba": {
+            "r": 0.11,
+            "g": 0.11,
+            "b": 0.12
+        },
+        "opacity": 1
+    }
+]

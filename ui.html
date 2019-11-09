@@ -3,8 +3,10 @@
 		if (event.data.pluginMessage.type === 'networkRequest') {
 			var request = new XMLHttpRequest();
 
-			request.open('GET', 'https://api.jsonbin.io/b/5d9a5f8bfdb9972702ddc18c');
-
+			request.open(
+				'GET',
+				'https://api.jsonbin.io/b/5d9a5f8bfdb9972702ddc18c/1'
+			);
 
 			request.setRequestHeader(
 				'secret-key',
@@ -12,7 +14,8 @@
 			);
 			request.responseType = 'json';
 			request.onload = () => {
-				window.parent.postMessage({
+				window.parent.postMessage(
+					{
 						pluginMessage: request.response
 					},
 					'*'
