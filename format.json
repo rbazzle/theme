@@ -1,701 +1,964 @@
-[{
-        "name": "fsLabel",
-        "theme": "Light",
-        "rgba": {
-            "r": 0,
-            "g": 0,
-            "b": 0
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsSecondaryLabel",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.24,
-            "g": 0.24,
-            "b": 0.26
-        },
-        "opacity": 0.6
-    },
-    {
-        "name": "fsTertiaryLabel",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.24,
-            "g": 0.24,
-            "b": 0.26
-        },
-        "opacity": 0.3
-    },
-    {
-        "name": "fsQuaternaryLabel",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.24,
-            "g": 0.24,
-            "b": 0.26
-        },
-        "opacity": 0.18
-    },
-    {
-        "name": "fsFill",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.47,
-            "g": 0.47,
-            "b": 0.5
-        },
-        "opacity": 0.2
-    },
-    {
-        "name": "fsSecondaryFill",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.47,
-            "g": 0.47,
-            "b": 0.5
-        },
-        "opacity": 0.16
-    },
-    {
-        "name": "fsTertiaryFill",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.46,
-            "g": 0.46,
-            "b": 0.5
-        },
-        "opacity": 0.12
-    },
-    {
-        "name": "fsQuaternaryFill",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.45,
-            "g": 0.45,
-            "b": 0.5
-        },
-        "opacity": 0.08
-    },
-    {
-        "name": "fsPlaceholderText",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.24,
-            "g": 0.24,
-            "b": 0.26
-        },
-        "opacity": 0.3
-    },
-    {
-        "name": "fsBackground",
-        "theme": "Light",
-        "rgba": {
-            "r": 1,
-            "g": 1,
-            "b": 1
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsSecondaryBackground",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.95,
-            "g": 0.95,
-            "b": 0.97
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsTertiaryBackground",
-        "theme": "Light",
-        "rgba": {
-            "r": 1,
-            "g": 1,
-            "b": 1
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGroupedBackground",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.95,
-            "g": 0.95,
-            "b": 0.97
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsSecondaryGroupedBackground",
-        "theme": "Light",
-        "rgba": {
-            "r": 1,
-            "g": 1,
-            "b": 1
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsTertiaryGroupedBackground",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.95,
-            "g": 0.95,
-            "b": 0.97
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsSeparator",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.24,
-            "g": 0.24,
-            "b": 0.26
-        },
-        "opacity": 0.29
-    },
-    {
-        "name": "fsOpaqueSeparator",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.78,
-            "g": 0.78,
-            "b": 0.78
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsLink",
-        "theme": "Light",
-        "rgba": {
-            "r": 0,
-            "g": 0.48,
-            "b": 1
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsTextDark",
-        "theme": "Light",
-        "rgba": {
-            "r": 0,
-            "g": 0,
-            "b": 0
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsTextLight",
-        "theme": "Light",
-        "rgba": {
-            "r": 1,
-            "g": 1,
-            "b": 1
-        },
-        "opacity": 0.6
-    },
-    {
-        "name": "fsBlue",
-        "theme": "Light",
-        "rgba": {
-            "r": 0,
-            "g": 0.48,
-            "b": 1
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGreen",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.2,
-            "g": 0.78,
-            "b": 0.35
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsIndigo",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.35,
-            "g": 0.34,
-            "b": 0.84
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsOrange",
-        "theme": "Light",
-        "rgba": {
-            "r": 1,
-            "g": 0.58,
-            "b": 0
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsPink",
-        "theme": "Light",
-        "rgba": {
-            "r": 1,
-            "g": 0.18,
-            "b": 0.33
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsPurple",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.69,
-            "g": 0.32,
-            "b": 0.87
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsRed",
-        "theme": "Light",
-        "rgba": {
-            "r": 1,
-            "g": 0.23,
-            "b": 0.19
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsTeal",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.35,
-            "g": 0.78,
-            "b": 0.98
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsYellow",
-        "theme": "Light",
-        "rgba": {
-            "r": 1,
-            "g": 0.8,
-            "b": 0
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGray",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.56,
-            "g": 0.56,
-            "b": 0.58
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGray2",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.68,
-            "g": 0.68,
-            "b": 0.7
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGray3",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.78,
-            "g": 0.78,
-            "b": 0.8
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGray4",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.82,
-            "g": 0.82,
-            "b": 0.84
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGray5",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.9,
-            "g": 0.9,
-            "b": 0.92
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGray6",
-        "theme": "Light",
-        "rgba": {
-            "r": 0.95,
-            "g": 0.95,
-            "b": 0.97
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsLabel",
-        "theme": "Dark",
-        "rgba": {
-            "r": 1,
-            "g": 1,
-            "b": 1
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsSecondaryLabel",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.92,
-            "g": 0.92,
-            "b": 0.96
-        },
-        "opacity": 0.6
-    },
-    {
-        "name": "fsTertiaryLabel",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.92,
-            "g": 0.92,
-            "b": 0.96
-        },
-        "opacity": 0.3
-    },
-    {
-        "name": "fsQuaternaryLabel",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.92,
-            "g": 0.92,
-            "b": 0.96
-        },
-        "opacity": 0.18
-    },
-    {
-        "name": "fsFill",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.47,
-            "g": 0.47,
-            "b": 0.5
-        },
-        "opacity": 0.36
-    },
-    {
-        "name": "fsSecondaryFill",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.47,
-            "g": 0.47,
-            "b": 0.5
-        },
-        "opacity": 0.32
-    },
-    {
-        "name": "fsTertiaryFill",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.46,
-            "g": 0.46,
-            "b": 0.5
-        },
-        "opacity": 0.24
-    },
-    {
-        "name": "fsQuaternaryFill",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.46,
-            "g": 0.46,
-            "b": 0.5
-        },
-        "opacity": 0.18
-    },
-    {
-        "name": "fsPlaceholderText",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.92,
-            "g": 0.92,
-            "b": 0.96
-        },
-        "opacity": 0.3
-    },
-    {
-        "name": "fsBackground",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0,
-            "g": 0,
-            "b": 0
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsSecondaryBackground",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.11,
-            "g": 0.11,
-            "b": 0.12
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsTertiaryBackground",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.17,
-            "g": 0.17,
-            "b": 0.18
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGroupedBackground",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0,
-            "g": 0,
-            "b": 0
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsSecondaryGroupedBackground",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.11,
-            "g": 0.11,
-            "b": 0.12
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsTertiaryGroupedBackground",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.17,
-            "g": 0.17,
-            "b": 0.18
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsSeparator",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.33,
-            "g": 0.33,
-            "b": 0.35
-        },
-        "opacity": 0.6
-    },
-    {
-        "name": "fsOpaqueSeparator",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.22,
-            "g": 0.22,
-            "b": 0.23
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsLink",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.04,
-            "g": 0.52,
-            "b": 1
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsTextDark",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0,
-            "g": 0,
-            "b": 0
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsTextLight",
-        "theme": "Dark",
-        "rgba": {
-            "r": 1,
-            "g": 1,
-            "b": 1
-        },
-        "opacity": 0.6
-    },
-    {
-        "name": "fsBlue",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.04,
-            "g": 0.52,
-            "b": 1
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGreen",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.19,
-            "g": 0.82,
-            "b": 0.35
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsIndigo",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.37,
-            "g": 0.36,
-            "b": 0.9
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsOrange",
-        "theme": "Dark",
-        "rgba": {
-            "r": 1,
-            "g": 0.62,
-            "b": 0.04
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsPink",
-        "theme": "Dark",
-        "rgba": {
-            "r": 1,
-            "g": 0.22,
-            "b": 0.37
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsPurple",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.75,
-            "g": 0.35,
-            "b": 0.95
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsRed",
-        "theme": "Dark",
-        "rgba": {
-            "r": 1,
-            "g": 0.27,
-            "b": 0.23
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsTeal",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.39,
-            "g": 0.82,
-            "b": 1
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsYellow",
-        "theme": "Dark",
-        "rgba": {
-            "r": 1,
-            "g": 0.84,
-            "b": 0.04
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGray",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.56,
-            "g": 0.56,
-            "b": 0.58
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGray2",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.39,
-            "g": 0.39,
-            "b": 0.4
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGray3",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.28,
-            "g": 0.28,
-            "b": 0.29
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGray4",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.23,
-            "g": 0.23,
-            "b": 0.24
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGray5",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.17,
-            "g": 0.17,
-            "b": 0.18
-        },
-        "opacity": 1
-    },
-    {
-        "name": "fsGray6",
-        "theme": "Dark",
-        "rgba": {
-            "r": 0.11,
-            "g": 0.11,
-            "b": 0.12
-        },
-        "opacity": 1
-    }
+[
+  {
+    "name": "fsLabel",
+    "type": "Text",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0,
+      "g": 0,
+      "b": 0
+    },
+    "opacity": 1,
+    "description": "A text label that contains primary content."
+  },
+  {
+    "name": "fsLabelSecondary",
+    "type": "Text",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.24,
+      "g": 0.24,
+      "b": 0.26
+    },
+    "opacity": 0.6,
+    "description": "A text label that contains secondary content."
+  },
+  {
+    "name": "fsLabelTertiary",
+    "type": "Text",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.24,
+      "g": 0.24,
+      "b": 0.26
+    },
+    "opacity": 0.3,
+    "description": "A text label that contains tertiary content."
+  },
+  {
+    "name": "fsLabelQuaternary",
+    "type": "Text",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.24,
+      "g": 0.24,
+      "b": 0.26
+    },
+    "opacity": 0.18,
+    "description": "A text label that contains quaternary content."
+  },
+  {
+    "name": "fsPlaceholderText",
+    "type": "Text",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.24,
+      "g": 0.24,
+      "b": 0.26
+    },
+    "opacity": 0.3,
+    "description": "Placeholder text in controls or text views."
+  },
+  {
+    "name": "fsLink",
+    "type": "Text",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.45,
+      "g": 0.62,
+      "b": 0.22
+    },
+    "opacity": 1,
+    "description": "Text that functions as a link."
+  },
+  {
+    "name": "fsTextDark",
+    "type": "Text",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0,
+      "g": 0,
+      "b": 0
+    },
+    "opacity": 1,
+    "description": "The nonadaptable system color for text on a light background."
+  },
+  {
+    "name": "fsTextLight",
+    "type": "Text",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 1,
+      "g": 1,
+      "b": 1
+    },
+    "opacity": 0.9,
+    "description": "The nonadaptable system color for text on a dark background."
+  },
+  {
+    "name": "fsSeparator",
+    "type": "Separators",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.24,
+      "g": 0.24,
+      "b": 0.26
+    },
+    "opacity": 0.29,
+    "description": "A separator that allows some underlying content to be visible."
+  },
+  {
+    "name": "fsOpaqueSeparator",
+    "type": "Separators",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.78,
+      "g": 0.78,
+      "b": 0.78
+    },
+    "opacity": 1,
+    "description": "A separator that doesn't allow any underlying content to be visible."
+  },
+  {
+    "name": "fsFill",
+    "type": "System Fills",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.47,
+      "g": 0.47,
+      "b": 0.5
+    },
+    "opacity": 0.2,
+    "description": "An overlay fill color for thin and small shapes."
+  },
+  {
+    "name": "fsFillSecondary",
+    "type": "System Fills",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.47,
+      "g": 0.47,
+      "b": 0.5
+    },
+    "opacity": 0.16,
+    "description": "An overlay fill color for medium-size shapes."
+  },
+  {
+    "name": "fsFillTertiary",
+    "type": "System Fills",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.46,
+      "g": 0.46,
+      "b": 0.5
+    },
+    "opacity": 0.12,
+    "description": "An overlay fill color for large shapes."
+  },
+  {
+    "name": "fsFillQuaternary",
+    "type": "System Fills",
+    "active": false,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.45,
+      "g": 0.45,
+      "b": 0.5
+    },
+    "opacity": 0.08,
+    "description": "An overlay fill color for large areas that contain complex content."
+  },
+  {
+    "name": "fsBackground",
+    "type": "Backgrounds",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 1,
+      "g": 1,
+      "b": 1
+    },
+    "opacity": 1,
+    "description": "The color for the main background of your interface."
+  },
+  {
+    "name": "fsBackgroundSecondary",
+    "type": "Backgrounds",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.95,
+      "g": 0.95,
+      "b": 0.97
+    },
+    "opacity": 1,
+    "description": "The color for content layered on top of the main background."
+  },
+  {
+    "name": "fsBackgroundTertiary",
+    "type": "Backgrounds",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 1,
+      "g": 1,
+      "b": 1
+    },
+    "opacity": 1,
+    "description": "The color for content layered on top of secondary backgrounds."
+  },
+  {
+    "name": "fsGroupedBackground",
+    "type": "Backgrounds",
+    "active": false,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.95,
+      "g": 0.95,
+      "b": 0.97
+    },
+    "opacity": 1,
+    "description": "The color for the main background of your grouped interface."
+  },
+  {
+    "name": "fsGroupedBackgroundSecondary",
+    "type": "Backgrounds",
+    "active": false,
+    "theme": "Light",
+    "rgb": {
+      "r": 1,
+      "g": 1,
+      "b": 1
+    },
+    "opacity": 1,
+    "description": "The color for content layered on top of the main background of your grouped interface."
+  },
+  {
+    "name": "fsGroupedBackgroundTertiary",
+    "type": "Backgrounds",
+    "active": false,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.95,
+      "g": 0.95,
+      "b": 0.97
+    },
+    "opacity": 1,
+    "description": "The color for content layered on top of secondary backgrounds of your grouped interface."
+  },
+  {
+    "name": "fsBlue",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.24,
+      "g": 0.5,
+      "b": 0.87
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsGreen",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.45,
+      "g": 0.62,
+      "b": 0.22
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsBrown",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.61,
+      "g": 0.58,
+      "b": 0.47
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsOrange",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.98,
+      "g": 0.69,
+      "b": 0.29
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsPink",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.9,
+      "g": 0.44,
+      "b": 0.53
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsPurple",
+    "type": "Colors",
+    "active": false,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.69,
+      "g": 0.32,
+      "b": 0.87
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsRed",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.85,
+      "g": 0.33,
+      "b": 0.27
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsTeal",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.44,
+      "g": 0.76,
+      "b": 0.91
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsYellow",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.95,
+      "g": 0.79,
+      "b": 0.14
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsYellowLight",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.99,
+      "g": 0.97,
+      "b": 0.82
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsGray",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.56,
+      "g": 0.56,
+      "b": 0.58
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsGray2",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.68,
+      "g": 0.68,
+      "b": 0.7
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsGray3",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.78,
+      "g": 0.78,
+      "b": 0.8
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsGray4",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.82,
+      "g": 0.82,
+      "b": 0.84
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsMale",
+    "type": "Sex",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.24,
+      "g": 0.5,
+      "b": 0.87
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsFemale",
+    "type": "Sex",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.9,
+      "g": 0.44,
+      "b": 0.53
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsUnknown",
+    "type": "Sex",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.59,
+      "g": 0.59,
+      "b": 0.59
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsLabel",
+    "type": "Text",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 1,
+      "g": 1,
+      "b": 1
+    },
+    "opacity": 1,
+    "description": "A text label that contains primary content."
+  },
+  {
+    "name": "fsLabelSecondary",
+    "type": "Text",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.92,
+      "g": 0.92,
+      "b": 0.96
+    },
+    "opacity": 0.6,
+    "description": "A text label that contains secondary content."
+  },
+  {
+    "name": "fsLabelTertiary",
+    "type": "Text",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.92,
+      "g": 0.92,
+      "b": 0.96
+    },
+    "opacity": 0.3,
+    "description": "A text label that contains tertiary content."
+  },
+  {
+    "name": "fsLabelQuaternary",
+    "type": "Text",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.92,
+      "g": 0.92,
+      "b": 0.96
+    },
+    "opacity": 0.18,
+    "description": "A text label that contains quaternary content."
+  },
+  {
+    "name": "fsPlaceholderText",
+    "type": "Text",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.92,
+      "g": 0.92,
+      "b": 0.96
+    },
+    "opacity": 0.3,
+    "description": "Placeholder text in controls or text views."
+  },
+  {
+    "name": "fsLink",
+    "type": "Text",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.53,
+      "g": 0.73,
+      "b": 0.25
+    },
+    "opacity": 1,
+    "description": "Text that functions as a link."
+  },
+  {
+    "name": "fsTextDark",
+    "type": "Text",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0,
+      "g": 0,
+      "b": 0
+    },
+    "opacity": 1,
+    "description": "The nonadaptable system color for text on a light background."
+  },
+  {
+    "name": "fsTextLight",
+    "type": "Text",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 1,
+      "g": 1,
+      "b": 1
+    },
+    "opacity": 0.9,
+    "description": "The nonadaptable system color for text on a dark background."
+  },
+  {
+    "name": "fsSeparator",
+    "type": "Separators",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.33,
+      "g": 0.33,
+      "b": 0.35
+    },
+    "opacity": 0.6,
+    "description": "A separator that allows some underlying content to be visible."
+  },
+  {
+    "name": "fsOpaqueSeparator",
+    "type": "Separators",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.22,
+      "g": 0.22,
+      "b": 0.23
+    },
+    "opacity": 1,
+    "description": "A separator that doesn't allow any underlying content to be visible."
+  },
+  {
+    "name": "fsFill",
+    "type": "System Fills",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.47,
+      "g": 0.47,
+      "b": 0.5
+    },
+    "opacity": 0.36,
+    "description": "An overlay fill color for thin and small shapes."
+  },
+  {
+    "name": "fsFillSecondary",
+    "type": "System Fills",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.47,
+      "g": 0.47,
+      "b": 0.5
+    },
+    "opacity": 0.32,
+    "description": "An overlay fill color for medium-size shapes."
+  },
+  {
+    "name": "fsFillTertiary",
+    "type": "System Fills",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.46,
+      "g": 0.46,
+      "b": 0.5
+    },
+    "opacity": 0.24,
+    "description": "An overlay fill color for large shapes."
+  },
+  {
+    "name": "fsFillQuaternary",
+    "type": "System Fills",
+    "active": false,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.46,
+      "g": 0.46,
+      "b": 0.5
+    },
+    "opacity": 0.18,
+    "description": "An overlay fill color for large areas that contain complex content."
+  },
+  {
+    "name": "fsBackground",
+    "type": "Backgrounds",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0,
+      "g": 0,
+      "b": 0
+    },
+    "opacity": 1,
+    "description": "The color for the main background of your interface."
+  },
+  {
+    "name": "fsBackgroundSecondary",
+    "type": "Backgrounds",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.11,
+      "g": 0.11,
+      "b": 0.12
+    },
+    "opacity": 1,
+    "description": "The color for content layered on top of the main background."
+  },
+  {
+    "name": "fsBackgroundTertiary",
+    "type": "Backgrounds",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.17,
+      "g": 0.17,
+      "b": 0.18
+    },
+    "opacity": 1,
+    "description": "The color for content layered on top of secondary backgrounds."
+  },
+  {
+    "name": "fsGroupedBackground",
+    "type": "Backgrounds",
+    "active": false,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0,
+      "g": 0,
+      "b": 0
+    },
+    "opacity": 1,
+    "description": "The color for the main background of your grouped interface."
+  },
+  {
+    "name": "fsGroupedBackgroundSecondary",
+    "type": "Backgrounds",
+    "active": false,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.11,
+      "g": 0.11,
+      "b": 0.12
+    },
+    "opacity": 1,
+    "description": "The color for content layered on top of the main background of your grouped interface."
+  },
+  {
+    "name": "fsGroupedBackgroundTertiary",
+    "type": "Backgrounds",
+    "active": false,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.17,
+      "g": 0.17,
+      "b": 0.18
+    },
+    "opacity": 1,
+    "description": "The color for content layered on top of secondary backgrounds of your grouped interface."
+  },
+  {
+    "name": "fsBlue",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.27,
+      "g": 0.56,
+      "b": 0.97
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsGreen",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.53,
+      "g": 0.73,
+      "b": 0.25
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsBrown",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.64,
+      "g": 0.6,
+      "b": 0.47
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsOrange",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.98,
+      "g": 0.69,
+      "b": 0.29
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsPink",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 1,
+      "g": 0.49,
+      "b": 0.59
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsPurple",
+    "type": "Colors",
+    "active": false,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.75,
+      "g": 0.35,
+      "b": 0.95
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsRed",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.85,
+      "g": 0.33,
+      "b": 0.27
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsTeal",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.44,
+      "g": 0.76,
+      "b": 0.91
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsYellow",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.96,
+      "g": 0.81,
+      "b": 0.2
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsYellowLight",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.93,
+      "g": 0.88,
+      "b": 0.66
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsGray",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.56,
+      "g": 0.56,
+      "b": 0.58
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsGray2",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.39,
+      "g": 0.39,
+      "b": 0.4
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsGray3",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.28,
+      "g": 0.28,
+      "b": 0.29
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsGray4",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.23,
+      "g": 0.23,
+      "b": 0.24
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsMale",
+    "type": "Sex",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.27,
+      "g": 0.56,
+      "b": 0.97
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsFemale",
+    "type": "Sex",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 1,
+      "g": 0.49,
+      "b": 0.59
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsUnknown",
+    "type": "Sex",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.59,
+      "g": 0.59,
+      "b": 0.59
+    },
+    "opacity": 1,
+    "description": ""
+  }
 ]
