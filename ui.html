@@ -5,17 +5,16 @@
 
 			request.open(
 				'GET',
-				'https://api.jsonbin.io/b/5d9a5f8bfdb9972702ddc18c/1'
+				'https://github.com/rbazzle/theme/blob/master/format.json'
 			);
 
 			request.setRequestHeader(
-				'secret-key',
-				'$2b$10$SdWsaaDD2pyQ32caqw6H7ulN3SpDKYfS5znwpKY4SROBcyU1uhrtq'
+				'Access-Control-Allow-Origin',
+				'key here'
 			);
 			request.responseType = 'json';
 			request.onload = () => {
-				window.parent.postMessage(
-					{
+				window.parent.postMessage({
 						pluginMessage: request.response
 					},
 					'*'
