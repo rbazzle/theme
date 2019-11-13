@@ -5,13 +5,9 @@
 
 			request.open(
 				'GET',
-				'https://github.com/rbazzle/theme/blob/master/format.json'
+				'https://rbazzle.github.io/theme/format.json'
 			);
 
-			request.setRequestHeader(
-				'Access-Control-Allow-Origin',
-				'key goes here'
-			);
 			request.responseType = 'json';
 			request.onload = () => {
 				window.parent.postMessage({
@@ -21,6 +17,7 @@
 				);
 			};
 			request.send();
+
 		}
 	};
 </script>
