@@ -52,6 +52,7 @@ function addStyle(color) {
             }
         ];
         style.description = `${description} ${figma.currentPage.name.toUpperCase()}`;
+        console.log("ADDED");
     }
     else {
         console.log("PAGE NAME DOES NOT MATCH");
@@ -69,11 +70,17 @@ function deleteStyle(style) {
 }
 figma.ui.onmessage = (msg) => __awaiter(this, void 0, void 0, function* () {
     let styleList = figma.getLocalPaintStyles();
-    console.log(styleList);
-    if (styleList.length > 0) {
+    let styleLength = styleList.length;
+    if (styleList.length == 0) {
         console.log("HERE");
         msg.forEach(color => {
-            for (let i = 0; i < styleList.length; i++) {
+            addStyle(color);
+        });
+    }
+    else {
+        console.log("THERE");
+        msg.forEach(color => {
+            for (let i = 0; i < styleLength; i++) {
                 let { name: styleName, description: styleDesc } = styleList[i];
                 let { type, name, theme } = color;
                 let THEME = theme.toUpperCase();
@@ -84,16 +91,9 @@ figma.ui.onmessage = (msg) => __awaiter(this, void 0, void 0, function* () {
                 }
                 else {
                     console.log(`ADDED ${color.name}`);
-                    addStyle(color);
+                    // addStyle(color);
                 }
             }
-        });
-    }
-    else {
-        console.log("THERE");
-        msg.forEach(color => {
-            addStyle(color);
-            console.log(`ADDED ${color.name}`);
         });
     }
     const nodes = [];
