@@ -53,6 +53,7 @@ function updateStyle(color, style) {
   const fills = clone(style.paints);
   fills[0].color.r = rgb;
   fills[0].opacity = opacity;
+  console.log(fills);
   color.paints = fills;
   console.log("UPDATED");
 }
@@ -62,29 +63,25 @@ function deleteStyle(style) {
 
 figma.ui.onmessage = async msg => {
   let styleList = figma.getLocalPaintStyles();
-  let styleLength = styleList.length;
+  const styleLength = styleList.length;
   if (styleLength == 0) {
-    console.log("HERE");
     msg.forEach(color => {
       addStyle(color);
     });
   } else {
-    console.log("THERE");
     msg.forEach(color => {
       for (let i = 0; i < styleLength; i++) {
         let { name: styleName, description: styleDesc } = styleList[i];
-        let { type, name, theme } = color;
+        let { name, theme } = color;
+        let styleName1 = styleName.split("/");
+        styleName = styleName1[1].toString();
         let regex = new RegExp(`(${theme})`, "g");
-        if (`${type}/${name}` == styleName && styleDesc.match(theme)) {
+
+        if (name == styleName && styleDesc.match(theme)) {
           updateStyle(color, styleList[i]);
           console.log(`MATCHED ${color.name}`);
-        } else if (`${type}/${name}` == styleName && !styleDesc.match(regex)) {
+        } else if (name == styleName && !styleDesc.match(regex)) {
           console.log(`IGNORED ${color.name}-${color.theme}`);
-        } else if (`${type}/${name}` !== styleName) {
-          console.log(`ADDED ${color.name}`);
-          // addStyle(color);
-        } else {
-          console.log(`MYSTERY ${color.name}`);
         }
       }
     });
