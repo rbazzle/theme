@@ -69,9 +69,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.45,
-      "g": 0.62,
-      "b": 0.22
+      "r": 0.24,
+      "g": 0.5,
+      "b": 0.87
     },
     "opacity": 1,
     "description": "Text that functions as a link."

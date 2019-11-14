@@ -42,7 +42,7 @@ function addStyle(color) {
         opacity
       }
     ];
-    style.description = `${description} ${figma.currentPage.name.toUpperCase()}`;
+    style.description = `${description} (${figma.currentPage.name})`;
     console.log("ADDED");
   } else {
     console.log("PAGE NAME DOES NOT MATCH");
@@ -54,6 +54,7 @@ function updateStyle(color, style) {
   fills[0].color.r = rgb;
   fills[0].opacity = opacity;
   color.paints = fills;
+  console.log("UPDATED");
 }
 function deleteStyle(style) {
   style.remove;
@@ -62,7 +63,7 @@ function deleteStyle(style) {
 figma.ui.onmessage = async msg => {
   let styleList = figma.getLocalPaintStyles();
   let styleLength = styleList.length;
-  if (styleList.length == 0) {
+  if (styleLength == 0) {
     console.log("HERE");
     msg.forEach(color => {
       addStyle(color);
@@ -73,14 +74,17 @@ figma.ui.onmessage = async msg => {
       for (let i = 0; i < styleLength; i++) {
         let { name: styleName, description: styleDesc } = styleList[i];
         let { type, name, theme } = color;
-        let THEME = theme.toUpperCase();
-        var regex = new RegExp(THEME, "g");
-        if (`${type}/${name}` == styleName && styleDesc.match(regex)) {
+        let regex = new RegExp(`(${theme})`, "g");
+        if (`${type}/${name}` == styleName && styleDesc.match(theme)) {
           updateStyle(color, styleList[i]);
           console.log(`MATCHED ${color.name}`);
-        } else {
+        } else if (`${type}/${name}` == styleName && !styleDesc.match(regex)) {
+          console.log(`IGNORED ${color.name}-${color.theme}`);
+        } else if (`${type}/${name}` !== styleName) {
           console.log(`ADDED ${color.name}`);
           // addStyle(color);
+        } else {
+          console.log(`MYSTERY ${color.name}`);
         }
       }
     });
