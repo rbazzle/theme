@@ -10,30 +10,92 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 figma.showUI(__html__, { visible: false });
 figma.ui.postMessage({ type: "networkRequest" });
 figma.loadFontAsync({ family: "Roboto", style: "Regular" });
-let styleList = figma.getLocalPaintStyles();
-// styleList.forEach(element => {
-// 	element.remove();
-// });
-figma.ui.onmessage = (msg) => __awaiter(this, void 0, void 0, function* () {
-    console.log(msg);
-    msg.forEach(element => {
-        let { name, rgb, opacity, description, theme, type, active } = element;
-        if (theme == figma.currentPage.name && active) {
-            let { r, g, b } = rgb;
-            const style = figma.createPaintStyle();
-            style.name = `${type}/${name}`;
-            style.paints = [
-                {
-                    type: "SOLID",
-                    color: { r, g, b },
-                    opacity
-                }
-            ];
-            style.description = description;
+function clone(val) {
+    const type = typeof val;
+    if (val === null) {
+        return null;
+    }
+    else if (type === "undefined" ||
+        type === "number" ||
+        type === "string" ||
+        type === "boolean") {
+        return val;
+    }
+    else if (type === "object") {
+        if (val instanceof Array) {
+            return val.map(x => clone(x));
         }
-    });
+        else if (val instanceof Uint8Array) {
+            return new Uint8Array(val);
+        }
+        else {
+            let o = {};
+            for (const key in val) {
+                o[key] = clone(val[key]);
+            }
+            return o;
+        }
+    }
+    throw "unknown";
+}
+function addStyle(color) {
+    let { type, rgb, name, opacity, theme, description, active } = color;
+    if (theme == figma.currentPage.name && active) {
+        let { r, g, b } = rgb;
+        const style = figma.createPaintStyle();
+        style.name = `${type}/${name}`;
+        style.paints = [
+            {
+                type: "SOLID",
+                color: { r, g, b },
+                opacity
+            }
+        ];
+        style.description = `${description} ${figma.currentPage.name.toUpperCase()}`;
+    }
+    else {
+        console.log("PAGE NAME DOES NOT MATCH");
+    }
+}
+function updateStyle(color, style) {
+    let { rgb, opacity } = color;
+    const fills = clone(style.paints);
+    fills[0].color.r = rgb;
+    fills[0].opacity = opacity;
+    color.paints = fills;
+}
+function deleteStyle(style) {
+    style.remove;
+}
+figma.ui.onmessage = (msg) => __awaiter(this, void 0, void 0, function* () {
     let styleList = figma.getLocalPaintStyles();
-    //   console.log(styleList);
+    console.log(styleList);
+    if (styleList.length > 0) {
+        console.log("HERE");
+        msg.forEach(color => {
+            for (let i = 0; i < styleList.length; i++) {
+                let { name: styleName, description: styleDesc } = styleList[i];
+                let { type, name, theme } = color;
+                let THEME = theme.toUpperCase();
+                var regex = new RegExp(THEME, "g");
+                if (`${type}/${name}` == styleName && styleDesc.match(regex)) {
+                    updateStyle(color, styleList[i]);
+                    console.log(`MATCHED ${color.name}`);
+                }
+                else {
+                    console.log(`ADDED ${color.name}`);
+                    addStyle(color);
+                }
+            }
+        });
+    }
+    else {
+        console.log("THERE");
+        msg.forEach(color => {
+            addStyle(color);
+            console.log(`ADDED ${color.name}`);
+        });
+    }
     const nodes = [];
     //CREATE RECTANGLES/CIRCLES WITH LABELS
     for (let i = 0; i < styleList.length; i++) {
