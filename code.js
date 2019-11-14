@@ -60,7 +60,7 @@ function addStyle(color) {
 }
 function updateStyle(color, style) {
     let { rgb, opacity } = color;
-    console.log(rgb);
+    // console.log(rgb);
     const fills = clone(style.paints);
     fills[0].color = rgb;
     fills[0].opacity = opacity;
