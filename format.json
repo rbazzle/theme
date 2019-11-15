@@ -131,7 +131,7 @@
   {
     "name": "fsFill",
     "type": "System Fills",
-    "active": true,
+    "active": false,
     "theme": "Light",
     "rgb": {
       "r": 0.5,
@@ -144,7 +144,7 @@
   {
     "name": "fsFillSecondary",
     "type": "System Fills",
-    "active": true,
+    "active": false,
     "theme": "Light",
     "rgb": {
       "r": 0.5,
@@ -157,7 +157,7 @@
   {
     "name": "fsFillTertiary",
     "type": "System Fills",
-    "active": true,
+    "active": false,
     "theme": "Light",
     "rgb": {
       "r": 0.5,
@@ -170,7 +170,7 @@
   {
     "name": "fsFillQuaternary",
     "type": "System Fills",
-    "active": false,
+    "active": ffalse,
     "theme": "Light",
     "rgb": {
       "r": 0.45,
@@ -612,7 +612,7 @@
   {
     "name": "fsFill",
     "type": "System Fills",
-    "active": true,
+    "active": false,
     "theme": "Dark",
     "rgb": {
       "r": 0.47,
@@ -625,7 +625,7 @@
   {
     "name": "fsFillSecondary",
     "type": "System Fills",
-    "active": true,
+    "active": false,
     "theme": "Dark",
     "rgb": {
       "r": 0.47,
@@ -638,7 +638,7 @@
   {
     "name": "fsFillTertiary",
     "type": "System Fills",
-    "active": true,
+    "active": false,
     "theme": "Dark",
     "rgb": {
       "r": 0.46,
@@ -651,7 +651,7 @@
   {
     "name": "fsFillQuaternary",
     "type": "System Fills",
-    "active": false,
+    "active": ffalse,
     "theme": "Dark",
     "rgb": {
       "r": 0.46,
