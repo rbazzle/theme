@@ -108,9 +108,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.24,
-      "g": 0.24,
-      "b": 0.26
+      "r": 0.26,
+      "g": 0.26,
+      "b": 0.23
     },
     "opacity": 0.29,
     "description": "A separator that allows some underlying content to be visible."
@@ -134,9 +134,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.47,
+      "r": 0.5,
       "g": 0.47,
-      "b": 0.5
+      "b": 0.47
     },
     "opacity": 0.2,
     "description": "An overlay fill color for thin and small shapes."
@@ -147,9 +147,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.47,
-      "g": 0.47,
-      "b": 0.5
+      "r": 0.5,
+      "g": 0.5,
+      "b": 0.47
     },
     "opacity": 0.16,
     "description": "An overlay fill color for medium-size shapes."
@@ -160,9 +160,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.46,
-      "g": 0.46,
-      "b": 0.5
+      "r": 0.5,
+      "g": 0.5,
+      "b": 0.46
     },
     "opacity": 0.12,
     "description": "An overlay fill color for large shapes."
@@ -199,9 +199,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.95,
-      "g": 0.95,
-      "b": 0.97
+      "r": 0.97,
+      "g": 0.97,
+      "b": 0.95
     },
     "opacity": 1,
     "description": "The color for content layered on top of the main background."
