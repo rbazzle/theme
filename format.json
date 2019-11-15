@@ -134,9 +134,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.47,
+      "r": 0.5,
       "g": 0.47,
-      "b": 0.5
+      "b": 0.47
     },
     "opacity": 0.2,
     "description": "An overlay fill color for thin and small shapes."
