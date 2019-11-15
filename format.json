@@ -108,9 +108,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.24,
-      "g": 0.24,
-      "b": 0.26
+      "r": 0.26,
+      "g": 0.26,
+      "b": 0.23
     },
     "opacity": 0.29,
     "description": "A separator that allows some underlying content to be visible."
