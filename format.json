@@ -160,9 +160,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.46,
-      "g": 0.46,
-      "b": 0.5
+      "r": 0.5,
+      "g": 0.5,
+      "b": 0.46
     },
     "opacity": 0.12,
     "description": "An overlay fill color for large shapes."
