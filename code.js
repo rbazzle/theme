@@ -64,7 +64,7 @@ function updateStyle(color, style, page) {
     console.log("MATCH RIGHT");
 }
 function deleteStyle(style) {
-    style.remove;
+    style.remove();
 }
 //CREATE RECTANGLES/CIRCLES WITH LABELS
 function styleGuide(style, i, nodes) {
@@ -97,7 +97,7 @@ figma.ui.onmessage = (msg) => __awaiter(this, void 0, void 0, function* () {
     const nodes = [];
     if (styleList.length == 0) {
         msg.forEach(color => {
-            if (color.active) {
+            if (color.active && page == color.theme) {
                 addStyle(color);
             }
         });
@@ -109,7 +109,11 @@ figma.ui.onmessage = (msg) => __awaiter(this, void 0, void 0, function* () {
                 let { name: styleName, description: styleDesc } = styleList[i];
                 let styleName1 = styleName.split("/");
                 styleName = styleName1[1].toString();
-                if (name == styleName &&
+                if (page == "DELETE") {
+                    console.log("DELETING");
+                    deleteStyle(styleList[i]);
+                }
+                else if (name == styleName &&
                     theme == page &&
                     styleDesc.match(new RegExp(`(${page})`, "g"))) {
                     //passing in just the name, so it changes the first instance of that name

@@ -56,7 +56,7 @@ function updateStyle(color, style, page) {
   console.log("MATCH RIGHT");
 }
 function deleteStyle(style) {
-  style.remove;
+  style.remove();
 }
 
 //CREATE RECTANGLES/CIRCLES WITH LABELS
@@ -94,7 +94,7 @@ figma.ui.onmessage = async msg => {
 
   if (styleList.length == 0) {
     msg.forEach(color => {
-      if (color.active) {
+      if (color.active && page == color.theme) {
         addStyle(color);
       }
     });
@@ -105,8 +105,10 @@ figma.ui.onmessage = async msg => {
         let { name: styleName, description: styleDesc } = styleList[i];
         let styleName1 = styleName.split("/");
         styleName = styleName1[1].toString();
-
-        if (
+        if (page == "DELETE") {
+          console.log("DELETING");
+          deleteStyle(styleList[i]);
+        } else if (
           name == styleName &&
           theme == page &&
           styleDesc.match(new RegExp(`(${page})`, "g"))
