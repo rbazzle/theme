@@ -45,17 +45,15 @@ function addStyle(color) {
   console.log("ADDED");
 }
 function updateStyle(color, style, page) {
+  //They must have the same names, but when updating it looks at the names and just adjusts the first one it finds with that name. Maybe get paint styles and filte by ID. But i only pass in one style here and clone it. This makes zero sense.
   console.log(style.name, style.description, page);
-  if (style.description == page) {
-    let { rgb, opacity } = color;
-    const fills = clone(style.paints);
-    fills[0].color = rgb;
-    fills[0].opacity = opacity;
-    style.paints = fills;
-    console.log(`UPDATED ${style.name} with ${color.name}-${color.theme}`);
-  } else {
-    console.log("MATCH WRONG");
-  }
+
+  let { rgb, opacity } = color;
+  const fills = clone(style.paints);
+  fills[0].color = rgb;
+  fills[0].opacity = opacity;
+  style.paints = fills;
+  console.log("MATCH RIGHT");
 }
 function deleteStyle(style) {
   style.remove;
@@ -109,16 +107,15 @@ figma.ui.onmessage = async msg => {
         styleName = styleName1[1].toString();
 
         if (
-          element.name == styleName &&
+          name == styleName &&
+          theme == page &&
           styleDesc.match(new RegExp(`(${page})`, "g"))
         ) {
-          console.log(`MATCH ${name}-${theme}`);
-
           //passing in just the name, so it changes the first instance of that name
+          console.log(page, styleDesc);
           updateStyle(element, styleList[i], page);
           styleGuide(styleList[i], i, nodes);
         } else {
-          console.log("NOT A MATCH");
         }
       }
     });
