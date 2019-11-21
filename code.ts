@@ -2,6 +2,11 @@ figma.showUI(__html__, { visible: false });
 figma.ui.postMessage({ type: "networkRequest" });
 figma.loadFontAsync({ family: "Roboto", style: "Regular" });
 
+//Are there any styles? If the page is titled correctly, Add the styles that match the page.
+//If the page is titled DELETE - then delete eisting styles.
+//If there is an update make the change to the style
+
+//Coming only update the relevant styles, delete and redraw document.
 function clone(val) {
   const type = typeof val;
   if (val === null) {
@@ -29,15 +34,15 @@ function clone(val) {
   throw "unknown";
 }
 function addStyle(color) {
+  console.log("ADD Func");
   let { type, rgb, name, opacity, theme, description } = color;
-  let { r, g, b } = rgb;
 
   const style = figma.createPaintStyle();
   style.name = `${type}/${name}`;
   style.paints = [
     {
       type: "SOLID",
-      color: { r, g, b },
+      color: rgb,
       opacity
     }
   ];
@@ -45,7 +50,6 @@ function addStyle(color) {
   console.log("ADDED");
 }
 function updateStyle(color, style, page) {
-  //They must have the same names, but when updating it looks at the names and just adjusts the first one it finds with that name. Maybe get paint styles and filte by ID. But i only pass in one style here and clone it. This makes zero sense.
   console.log(style.name, style.description, page);
 
   let { rgb, opacity } = color;
@@ -56,6 +60,8 @@ function updateStyle(color, style, page) {
   console.log("MATCH RIGHT");
 }
 function deleteStyle(style) {
+  console.log("DELETE Func");
+
   style.remove();
 }
 
@@ -88,11 +94,11 @@ function styleGuide(style, i, nodes) {
 
 figma.ui.onmessage = async msg => {
   let styleList = figma.getLocalPaintStyles();
-  const styleLength = styleList.length;
   let page = figma.currentPage.name;
   const nodes: SceneNode[] = [];
-
+  console.log(msg);
   if (styleList.length == 0) {
+    console.log("Here");
     msg.forEach(color => {
       if (color.active && page == color.theme) {
         addStyle(color);
@@ -100,24 +106,25 @@ figma.ui.onmessage = async msg => {
     });
   } else {
     msg.forEach(element => {
-      for (let i = 0; i < styleLength; i++) {
+      for (let i = 0; i < styleList.length; i++) {
         let { name, theme } = element;
         let { name: styleName, description: styleDesc } = styleList[i];
         let styleName1 = styleName.split("/");
         styleName = styleName1[1].toString();
+
         if (page == "DELETE") {
           console.log("DELETING");
           deleteStyle(styleList[i]);
         } else if (
           name == styleName &&
           theme == page &&
-          styleDesc.match(new RegExp(`(${page})`, "g"))
+          styleDesc.match(new RegExp(`(${theme})`, "g"))
         ) {
-          //passing in just the name, so it changes the first instance of that name
-          console.log(page, styleDesc);
+          console.log("There");
           updateStyle(element, styleList[i], page);
           styleGuide(styleList[i], i, nodes);
         } else {
+          console.log("ANOMOLY");
         }
       }
     });
