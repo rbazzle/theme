@@ -199,9 +199,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.97,
-      "g": 0.97,
-      "b": 0.96
+      "r": 0.93,
+      "g": 0.93,
+      "b": 0.91
     },
     "opacity": 1,
     "description": "The color for content layered on top of the main background."
@@ -212,9 +212,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.95,
-      "g": 0.95,
-      "b": 0.94
+      "r": 1,
+      "g": 1,
+      "b": 1
     },
     "opacity": 1,
     "description": "The color for content layered on top of secondary backgrounds."
