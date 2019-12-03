@@ -316,9 +316,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.9,
-      "g": 0.44,
-      "b": 0.53
+      "r": 0.95,
+      "g": 0.31,
+      "b": 0.43
     },
     "opacity": 1,
     "description": ""
@@ -355,9 +355,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.44,
-      "g": 0.76,
-      "b": 0.91
+      "r": 0.35,
+      "g": 0.78,
+      "b": 0.98
     },
     "opacity": 1,
     "description": ""
@@ -798,8 +798,8 @@
     "theme": "Dark",
     "rgb": {
       "r": 1,
-      "g": 0.49,
-      "b": 0.59
+      "g": 0.35,
+      "b": 0.48
     },
     "opacity": 1,
     "description": ""
@@ -836,9 +836,9 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.44,
-      "g": 0.76,
-      "b": 0.91
+      "r": 0.39,
+      "g": 0.82,
+      "b": 1
     },
     "opacity": 1,
     "description": ""
