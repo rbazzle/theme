@@ -57,13 +57,13 @@ function addStyle(color) {
     style.description = `${description} (${theme})`;
     console.log("ADDED");
 }
-function updateStyle(color, style, page) {
-    console.log(style.name, style.description, page);
-    let { rgb, opacity } = color;
+function updateStyle(color, style) {
+    let { rgb, opacity, description, theme } = color;
     const fills = clone(style.paints);
     fills[0].color = rgb;
     fills[0].opacity = opacity;
     style.paints = fills;
+    style.description = `${description} (${theme})`;
     console.log("MATCH RIGHT");
 }
 function deleteStyle(style) {
@@ -122,7 +122,7 @@ figma.ui.onmessage = (msg) => __awaiter(this, void 0, void 0, function* () {
                     theme == page &&
                     styleDesc.match(new RegExp(`(${theme})`, "g"))) {
                     console.log("There");
-                    updateStyle(element, styleList[i], page);
+                    updateStyle(element, styleList[i]);
                     styleGuide(styleList[i], i, nodes);
                 }
                 else {
