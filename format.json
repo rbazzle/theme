@@ -199,11 +199,11 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.53,
-      "g": 0.53,
-      "b": 0.52
+      "r": 0.88,
+      "g": 0.88,
+      "b": 0.84
     },
-    "opacity": 0.1,
+    "opacity": 0.2,
     "description": "Tint color for  differentiating between two sections of the main background of your interface."
   },
   {
@@ -693,11 +693,11 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.53,
-      "g": 0.53,
-      "b": 0.52
+      "r": 0.88,
+      "g": 0.88,
+      "b": 0.84
     },
-    "opacity": 0.2,
+    "opacity": 0.1,
     "description": "Tint color for  differentiating between two sections of the main background of your interface."
   },
   {
