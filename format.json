@@ -4,9 +4,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0,
-      "g": 0,
-      "b": 0
+      "r": 1,
+      "g": 1,
+      "b": 1
     },
     "opacity": 1,
     "description": "A text label that contains primary content."
@@ -391,7 +391,7 @@
   {
     "name": "fsYellowLight",
     "type": "Colors",
-    "active": true,
+    "active": false,
     "theme": "Light",
     "rgb": {
       "r": 0.97,
@@ -885,7 +885,7 @@
   {
     "name": "fsYellowLight",
     "type": "Colors",
-    "active": true,
+    "active": false,
     "theme": "Dark",
     "rgb": {
       "r": 0.89,
