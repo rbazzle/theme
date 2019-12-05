@@ -2,10 +2,8 @@ figma.showUI(__html__, { visible: false });
 figma.ui.postMessage({ type: "networkRequest" });
 figma.loadFontAsync({ family: "Roboto", style: "Regular" });
 
-//Are there any styles? If the page is titled correctly, Add the styles that match the page.
-//If the page is titled DELETE - then delete eisting styles.
-//If there is an update make the change to the style
-
+//Check the page title. DELETE, LIGHT, or DARK
+//If there is an update make the change to the style, add new ones, delete non matches
 //Coming only update the relevant styles, delete and redraw document.
 function clone(val) {
   const type = typeof val;
@@ -33,35 +31,72 @@ function clone(val) {
   }
   throw "unknown";
 }
-function addStyle(color) {
+
+function addStyle(color, pageTheme) {
   console.log("ADD Func");
   let { type, rgb, name, opacity, theme, description } = color;
+  if (color.active && pageTheme == color.theme) {
+    const style = figma.createPaintStyle();
+    style.name = `${type}/${name}`;
+    style.paints = [
+      {
+        type: "SOLID",
+        color: rgb,
+        opacity
+      }
+    ];
+    style.description = `${description} (${theme})`;
+    console.log("ADDED");
+  }
+}
+function updateStyles(msg, styleList, pageTheme) {
+  msg = msg.filter(msg.theme == pageTheme);
+  styleList = styleList.filter(
+    styleList.description.match(new RegExp(`(${pageTheme})`, "g"))
+  );
 
-  const style = figma.createPaintStyle();
-  style.name = `${type}/${name}`;
-  style.paints = [
-    {
-      type: "SOLID",
-      color: rgb,
-      opacity
+  msg.forEach(color => {
+    let {
+      name: colorName,
+      rgb: colorRgb,
+      opacity: colorOpacity,
+      description: colorDescription,
+      theme: colorTheme
+    } = color;
+
+    let styleItem = styleList.find(styleList.name == colorName);
+
+    if (styleItem == undefined) {
+      addStyle(color, pageTheme);
+    } else {
+      let {
+        name,
+        description: styleDescription,
+        paints: stylePaints
+      } = styleItem;
+      let styleName = name.split("/");
+      styleName = styleName[1].toString();
+
+      const fills = clone(styleItem.paints);
+      fills[0].color = colorRgb;
+      fills[0].opacity = colorOpacity;
+      stylePaints = fills;
+      styleDescription = `${colorDescription} (${colorTheme})`;
     }
-  ];
-  style.description = `${description} (${theme})`;
-  console.log("ADDED");
-}
-function updateStyle(color, style) {
-  let { rgb, opacity, description, theme } = color;
-  const fills = clone(style.paints);
-  fills[0].color = rgb;
-  fills[0].opacity = opacity;
-  style.paints = fills;
-  style.description = `${description} (${theme})`;
-  console.log("MATCH RIGHT");
-}
-function deleteStyle(style) {
-  console.log("DELETE Func");
+  });
 
-  style.remove();
+  styleList.forEach(style => {
+    let colorItem = msg.find(msg.name == style.name);
+    if (colorItem == undefined) {
+      style.remove();
+    }
+  });
+}
+
+function deleteAllStyles(styleList) {
+  styleList.forEach(style => {
+    style.remove();
+  });
 }
 
 //CREATE RECTANGLES/CIRCLES WITH LABELS
@@ -93,43 +128,21 @@ function styleGuide(style, i, nodes) {
 
 figma.ui.onmessage = async msg => {
   let styleList = figma.getLocalPaintStyles();
-  let page = figma.currentPage.name;
+  let pageTheme = figma.currentPage.name;
   const nodes: SceneNode[] = [];
-  console.log(msg);
-  if (styleList.length == 0) {
-    console.log("Here");
-    msg.forEach(color => {
-      if (color.active && page == color.theme) {
-        addStyle(color);
-      }
-    });
-  } else {
-    msg.forEach(element => {
-      for (let i = 0; i < styleList.length; i++) {
-        let { name, theme } = element;
-        let { name: styleName, description: styleDesc } = styleList[i];
-        let styleName1 = styleName.split("/");
-        styleName = styleName1[1].toString();
 
-        if (page == "DELETE") {
-          console.log("DELETING");
-          deleteStyle(styleList[i]);
-        } else if (
-          name == styleName &&
-          theme == page &&
-          styleDesc.match(new RegExp(`(${theme})`, "g"))
-        ) {
-          console.log("There");
-          updateStyle(element, styleList[i]);
-          styleGuide(styleList[i], i, nodes);
-        } else {
-          console.log("ANOMOLY");
-        }
-      }
-    });
-    figma.currentPage.selection = nodes;
-    figma.viewport.scrollAndZoomIntoView(nodes);
+  if (pageTheme == "LIGHT" || "DARK") {
+    console.log("UPDATING");
+    updateStyles(msg, styleList, pageTheme);
+  } else if (pageTheme == "DELETE") {
+    console.log("DELETING");
+    deleteAllStyles(styleList);
+  } else {
+    console.log("Try Changing Page Name to LIGHT or DARK");
   }
+
+  figma.currentPage.selection = nodes;
+  figma.viewport.scrollAndZoomIntoView(nodes);
 
   //CLOSE PLUGIN
   figma.closePlugin();
