@@ -4,7 +4,6 @@ figma.loadFontAsync({ family: "Roboto", style: "Regular" });
 
 //Check the page title. DELETE, LIGHT, or DARK
 //If there is an update make the change to the style, add new ones, delete non matches
-//Coming only update the relevant styles, delete and redraw document.
 function clone(val) {
   const type = typeof val;
   if (val === null) {
@@ -35,7 +34,6 @@ function parseName(styleName) {
   let name = styleName.split("/");
   return name[1].toString();
 }
-
 function addStyle(color, pageTheme) {
   let { type, rgb, name, opacity, theme, description } = color;
   if (color.active && pageTheme == color.theme) {
@@ -106,14 +104,11 @@ function updateStyles(msg, styleList, pageTheme) {
     }
   });
 }
-
 function deleteAllStyles(styleList) {
   styleList.forEach(style => {
     style.remove();
   });
 }
-
-//CREATE RECTANGLES/CIRCLES WITH LABELS
 function styleGuide(styleList, nodes) {
   for (let i = 0; i < styleList.length; i++) {
     let { name, id } = styleList[i];
