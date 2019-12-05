@@ -78,19 +78,25 @@ function updateStyles(msg, styleList, pageTheme) {
     if (styleItem == undefined && color.active == true) {
       addStyle(color, pageTheme);
     } else if (styleItem !== undefined && color.active == true) {
-      let {
-        name,
-        description: styleDescription,
-        paints: stylePaints
-      } = styleItem;
-      let styleName = name.split("/");
-      styleName = styleName[1].toString();
+      if (
+        colorRgb.r !== Math.round(styleItem.paints[0].color.r * 100) / 100 ||
+        colorRgb.g !== Math.round(styleItem.paints[0].color.g * 100) / 100 ||
+        colorRgb.b !== Math.round(styleItem.paints[0].color.b * 100) / 100 ||
+        color.opacity !== Math.round(styleItem.paints[0].opacity * 100) / 100
+      ) {
+        let {
+          name,
+          description: styleDescription,
+          paints: stylePaints
+        } = styleItem;
 
-      const fills = clone(styleItem.paints);
-      fills[0].color = colorRgb;
-      fills[0].opacity = colorOpacity;
-      stylePaints = fills;
-      styleDescription = `${colorDescription} (${colorTheme})`;
+        const fills = clone(styleItem.paints);
+        fills[0].color = colorRgb;
+        fills[0].opacity = colorOpacity;
+        stylePaints = fills;
+        styleDescription = `${colorDescription} (${colorTheme})`;
+        console.log("Changed: " + parseName(name));
+      }
     } else {
       console.log("Inactive color: " + color.name);
     }
