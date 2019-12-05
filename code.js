@@ -81,12 +81,12 @@ function updateStyles(msg, styleList, pageTheme) {
                 colorRgb.g !== Math.round(styleItem.paints[0].color.g * 100) / 100 ||
                 colorRgb.b !== Math.round(styleItem.paints[0].color.b * 100) / 100 ||
                 color.opacity !== Math.round(styleItem.paints[0].opacity * 100) / 100) {
-                let { name, description: styleDescription, paints: stylePaints } = styleItem;
+                let { name } = styleItem;
                 const fills = clone(styleItem.paints);
                 fills[0].color = colorRgb;
                 fills[0].opacity = colorOpacity;
-                stylePaints = fills;
-                styleDescription = `${colorDescription} (${colorTheme})`;
+                styleItem.paints = fills;
+                styleItem.description = `${colorDescription} (${colorTheme})`;
                 console.log("Changed: " + parseName(name));
             }
         }
@@ -98,7 +98,7 @@ function updateStyles(msg, styleList, pageTheme) {
         let colorItem = msg.find(color => color.name == parseName(style.name));
         if (colorItem == undefined || colorItem.active == false) {
             style.remove();
-            console.log("DELETED" + style.name);
+            console.log("Deleted: " + style.name);
         }
     });
 }
