@@ -41,8 +41,11 @@ function clone(val) {
     }
     throw "unknown";
 }
+function parseName(styleName) {
+    let name = styleName.split("/");
+    return name[1].toString();
+}
 function addStyle(color, pageTheme) {
-    console.log("ADD Func");
     let { type, rgb, name, opacity, theme, description } = color;
     if (color.active && pageTheme == color.theme) {
         const style = figma.createPaintStyle();
@@ -55,19 +58,25 @@ function addStyle(color, pageTheme) {
             }
         ];
         style.description = `${description} (${theme})`;
-        console.log("ADDED");
+        console.log("ADDED: " + color.name);
     }
 }
 function updateStyles(msg, styleList, pageTheme) {
-    msg = msg.filter(msg.theme == pageTheme);
-    styleList = styleList.filter(styleList.description.match(new RegExp(`(${pageTheme})`, "g")));
+    msg = msg.filter(color => color.theme == pageTheme);
+    function filterStyles(styleList) {
+        let desc = styleList.description
+            .match(new RegExp(`(${pageTheme})`, "g"))
+            .toString();
+        return desc == pageTheme;
+    }
+    styleList = styleList.filter(filterStyles);
     msg.forEach(color => {
         let { name: colorName, rgb: colorRgb, opacity: colorOpacity, description: colorDescription, theme: colorTheme } = color;
-        let styleItem = styleList.find(styleList.name == colorName);
-        if (styleItem == undefined) {
+        let styleItem = styleList.find(style => parseName(style.name) == colorName);
+        if (styleItem == undefined && color.active == true) {
             addStyle(color, pageTheme);
         }
-        else {
+        else if (styleItem !== undefined && color.active == true) {
             let { name, description: styleDescription, paints: stylePaints } = styleItem;
             let styleName = name.split("/");
             styleName = styleName[1].toString();
@@ -77,11 +86,15 @@ function updateStyles(msg, styleList, pageTheme) {
             stylePaints = fills;
             styleDescription = `${colorDescription} (${colorTheme})`;
         }
+        else {
+            console.log("Inactive color: " + color.name);
+        }
     });
     styleList.forEach(style => {
-        let colorItem = msg.find(msg.name == style.name);
-        if (colorItem == undefined) {
+        let colorItem = msg.find(color => color.name == parseName(style.name));
+        if (colorItem == undefined || colorItem.active == false) {
             style.remove();
+            console.log("DELETED" + style.name);
         }
     });
 }
@@ -91,36 +104,40 @@ function deleteAllStyles(styleList) {
     });
 }
 //CREATE RECTANGLES/CIRCLES WITH LABELS
-function styleGuide(style, i, nodes) {
-    let { name, id } = style;
-    const rect = figma.createRectangle();
-    rect.name = name;
-    rect.y = i * 150;
-    rect.cornerRadius = 100;
-    rect.fillStyleId = id;
-    figma.currentPage.appendChild(rect);
-    const label = figma.createText();
-    label.fills = [{ type: "SOLID", color: { r: 0, g: 0, b: 0 } }];
-    label.characters = name;
-    label.fontSize = 30;
-    label.x = 200;
-    label.y = i * 150;
-    label.textAlignVertical = "TOP";
-    label.lineHeight = {
-        value: 100,
-        unit: "PIXELS"
-    };
-    label.name = name;
-    figma.currentPage.appendChild(label);
-    nodes.push(rect, label);
+function styleGuide(styleList, nodes) {
+    for (let i = 0; i < styleList.length; i++) {
+        let { name, id } = styleList[i];
+        const rect = figma.createRectangle();
+        rect.name = parseName(name);
+        rect.y = i * 150;
+        rect.cornerRadius = 100;
+        rect.fillStyleId = id;
+        figma.currentPage.appendChild(rect);
+        const label = figma.createText();
+        label.fills = [{ type: "SOLID", color: { r: 0, g: 0, b: 0 } }];
+        label.characters = parseName(name);
+        label.fontSize = 30;
+        label.x = 200;
+        label.y = i * 150;
+        label.textAlignVertical = "TOP";
+        label.lineHeight = {
+            value: 100,
+            unit: "PIXELS"
+        };
+        label.name = name;
+        figma.currentPage.appendChild(label);
+        nodes.push(rect, label);
+    }
 }
 figma.ui.onmessage = (msg) => __awaiter(this, void 0, void 0, function* () {
     let styleList = figma.getLocalPaintStyles();
     let pageTheme = figma.currentPage.name;
     const nodes = [];
-    if (pageTheme == "LIGHT" || "DARK") {
+    if (pageTheme == "Light" || pageTheme == "Dark") {
         console.log("UPDATING");
         updateStyles(msg, styleList, pageTheme);
+        console.log("DRAWING");
+        styleGuide(styleList, nodes);
     }
     else if (pageTheme == "DELETE") {
         console.log("DELETING");
