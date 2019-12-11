@@ -233,6 +233,19 @@
     "description": "The color for content layered on top of secondary backgrounds."
   },
   {
+    "name": "fsHighlight",
+    "type": "Backgrounds",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.98,
+      "g": 0.93,
+      "b": 0.75
+    },
+    "opacity": 1,
+    "description": "The color for calling out a something from the rest of the ui."
+  },
+  {
     "name": "fsGroupedBackground",
     "type": "Backgrounds",
     "active": false,
@@ -725,6 +738,19 @@
     },
     "opacity": 1,
     "description": "The color for content layered on top of secondary backgrounds."
+  },
+  {
+    "name": "fsHighlight",
+    "type": "Backgrounds",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.26,
+      "g": 0.24,
+      "b": 0.2
+    },
+    "opacity": 1,
+    "description": "The color for calling out a something from the rest of the ui."
   },
   {
     "name": "fsGroupedBackground",
