@@ -99,7 +99,7 @@
       "g": 1,
       "b": 1
     },
-    "opacity": 0.9,
+    "opacity": 1,
     "description": "The nonadaptable system color for text on a dark background."
   },
   {
@@ -199,11 +199,11 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.88,
-      "g": 0.88,
-      "b": 0.84
+      "r": 0.96,
+      "g": 0.96,
+      "b": 0.96
     },
-    "opacity": 0.2,
+    "opacity": 1,
     "description": "Tint color for  differentiating between two sections of the main background of your interface."
   },
   {
@@ -214,7 +214,7 @@
     "rgb": {
       "r": 0.93,
       "g": 0.93,
-      "b": 0.91
+      "b": 0.93
     },
     "opacity": 1,
     "description": "The color for content layered on top of the main background."
@@ -238,9 +238,9 @@
     "active": false,
     "theme": "Light",
     "rgb": {
-      "r": 0.95,
-      "g": 0.95,
-      "b": 0.97
+      "r": 0.93,
+      "g": 0.93,
+      "b": 0.91
     },
     "opacity": 1,
     "description": "The color for the main background of your grouped interface."
@@ -407,9 +407,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.56,
-      "g": 0.56,
-      "b": 0.58
+      "r": 0.58,
+      "g": 0.58,
+      "b": 0.56
     },
     "opacity": 1,
     "description": ""
@@ -420,9 +420,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.68,
-      "g": 0.68,
-      "b": 0.7
+      "r": 0.65,
+      "g": 0.65,
+      "b": 0.63
     },
     "opacity": 1,
     "description": ""
@@ -433,9 +433,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.78,
-      "g": 0.78,
-      "b": 0.8
+      "r": 0.72,
+      "g": 0.72,
+      "b": 0.71
     },
     "opacity": 1,
     "description": ""
@@ -446,9 +446,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.82,
-      "g": 0.82,
-      "b": 0.84
+      "r": 0.79,
+      "g": 0.79,
+      "b": 0.78
     },
     "opacity": 1,
     "description": ""
@@ -593,7 +593,7 @@
       "g": 1,
       "b": 1
     },
-    "opacity": 0.9,
+    "opacity": 1,
     "description": "The nonadaptable system color for text on a dark background."
   },
   {
@@ -693,9 +693,9 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.88,
-      "g": 0.88,
-      "b": 0.84
+      "r": 0.05,
+      "g": 0.05,
+      "b": 0.05
     },
     "opacity": 0.1,
     "description": "Tint color for  differentiating between two sections of the main background of your interface."
@@ -706,9 +706,9 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.11,
-      "g": 0.11,
-      "b": 0.12
+      "r": 0.1,
+      "g": 0.09,
+      "b": 0.09
     },
     "opacity": 1,
     "description": "The color for content layered on top of the main background."
@@ -719,8 +719,8 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.17,
-      "g": 0.17,
+      "r": 0.19,
+      "g": 0.19,
       "b": 0.18
     },
     "opacity": 1,
@@ -745,9 +745,9 @@
     "active": false,
     "theme": "Dark",
     "rgb": {
-      "r": 0.11,
-      "g": 0.11,
-      "b": 0.12
+      "r": 0.1,
+      "g": 0.09,
+      "b": 0.09
     },
     "opacity": 1,
     "description": "The color for content layered on top of the main background of your grouped interface."
@@ -901,9 +901,9 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.56,
-      "g": 0.56,
-      "b": 0.58
+      "r": 0.58,
+      "g": 0.57,
+      "b": 0.56
     },
     "opacity": 1,
     "description": ""
@@ -914,9 +914,9 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.39,
-      "g": 0.39,
-      "b": 0.4
+      "r": 0.48,
+      "g": 0.48,
+      "b": 0.46
     },
     "opacity": 1,
     "description": ""
@@ -927,9 +927,9 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.28,
-      "g": 0.28,
-      "b": 0.29
+      "r": 0.38,
+      "g": 0.38,
+      "b": 0.37
     },
     "opacity": 1,
     "description": ""
@@ -940,9 +940,9 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.23,
-      "g": 0.23,
-      "b": 0.24
+      "r": 0.29,
+      "g": 0.29,
+      "b": 0.28
     },
     "opacity": 1,
     "description": ""
