@@ -352,7 +352,7 @@
   {
     "name": "fsPurple",
     "type": "Colors",
-    "active": false,
+    "active": true,
     "theme": "Light",
     "rgb": {
       "r": 0.69,
@@ -859,7 +859,7 @@
   {
     "name": "fsPurple",
     "type": "Colors",
-    "active": false,
+    "active": true,
     "theme": "Dark",
     "rgb": {
       "r": 0.75,
