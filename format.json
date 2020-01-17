@@ -467,6 +467,34 @@
     "description": ""
   },
   {
+    "name": "fsGray5",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.9,
+      "g": 0.9,
+      "b": 0.92
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsGray6",
+    "type": "Colors",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.95,
+      "g": 0.95,
+      "b": 0.97
+    },
+    "opacity": 1,
+    "description": ""
+  },
+
+
+  {
     "name": "fsMale",
     "type": "Sex",
     "active": true,
@@ -969,6 +997,32 @@
       "r": 0.29,
       "g": 0.29,
       "b": 0.28
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsGray5",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.17,
+      "g": 0.17,
+      "b": 0.18
+    },
+    "opacity": 1,
+    "description": ""
+  },
+  {
+    "name": "fsGray6",
+    "type": "Colors",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.11,
+      "g": 0.11,
+      "b": 0.12
     },
     "opacity": 1,
     "description": ""
