@@ -69,9 +69,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.45,
-      "g": 0.62,
-      "b": 0.22
+      "r": 0.09,
+      "g": 0.49,
+      "b": 0.61
     },
     "opacity": 1,
     "description": "Text that functions as a link."
@@ -381,9 +381,9 @@
     "active": true,
     "theme": "Light",
     "rgb": {
-      "r": 0.0,
-      "g": 0.61,
-      "b": 0.7
+      "r": 0.17,
+      "g": 0.77,
+      "b": 0.95
     },
     "opacity": 1,
     "description": ""
@@ -604,9 +604,9 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.53,
-      "g": 0.73,
-      "b": 0.25
+      "r": 0.16,
+      "g": 0.62,
+      "b": 0.76
     },
     "opacity": 1,
     "description": "Text that functions as a link."
@@ -916,9 +916,9 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.0,
-      "g": 0.65,
-      "b": 0.76
+      "r": 0.39,
+      "g": 0.82,
+      "b": 1
     },
     "opacity": 1,
     "description": ""
