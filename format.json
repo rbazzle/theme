@@ -234,6 +234,19 @@
     "description": "The color for content layered on top of secondary backgrounds."
   },
   {
+    "name": "fsBackgroundColored",
+    "type": "Backgrounds",
+    "active": true,
+    "theme": "Light",
+    "rgb": {
+      "r": 0.9,
+      "g": 0.95,
+      "b": 0.96
+    },
+    "opacity": 1,
+    "description": "The color for content that needs a bit of extra flavor."
+  },
+  {
     "name": "fsHighlight",
     "type": "Backgrounds",
     "active": true,
@@ -766,6 +779,19 @@
     },
     "opacity": 1,
     "description": "The color for content layered on top of secondary backgrounds."
+  },
+  {
+    "name": "fsBackgroundColored",
+    "type": "Backgrounds",
+    "active": true,
+    "theme": "Dark",
+    "rgb": {
+      "r": 0.12,
+      "g": 0.4,
+      "b": 0.44
+    },
+    "opacity": 1,
+    "description": "The color for content that needs a bit of extra flavor."
   },
   {
     "name": "fsHighlight",
