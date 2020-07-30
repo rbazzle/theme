@@ -799,9 +799,9 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.26,
-      "g": 0.24,
-      "b": 0.2
+      "r": 0.31,
+      "g": 0.3,
+      "b": 0.26
     },
     "opacity": 1,
     "description": "The color for calling out a something from the rest of the ui."
