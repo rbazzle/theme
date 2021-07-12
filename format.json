@@ -760,9 +760,9 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.1,
-      "g": 0.09,
-      "b": 0.09
+      "r": 0.13,
+      "g": 0.13,
+      "b": 0.12
     },
     "opacity": 1,
     "description": "The color for content layered on top of the main background."
@@ -786,8 +786,8 @@
     "active": true,
     "theme": "Dark",
     "rgb": {
-      "r": 0.12,
-      "g": 0.4,
+      "r": 0.19,
+      "g": 0.41,
       "b": 0.44
     },
     "opacity": 1,
